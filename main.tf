@@ -1,5 +1,14 @@
 
 
+terraform {
+  backend "s3" {
+    bucket = "remodemo"
+    key = "terraform.tfstate"
+    region = "ap-south-1"
+    
+  }
+}
+
 
 # Configure the AWS Provider
 provider "aws" {
@@ -16,14 +25,5 @@ resource "aws_s3_bucket" "s3_bucket" {
   tags = {
     Name        = "remodemo"
     Environment = "OPS"
-  }
-}
-
-terraform {
-  backend "s3" {
-    bucket = "remodemo"
-    key = "backend.tf"
-    region = "ap-south-1"
-    
   }
 }
