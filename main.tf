@@ -2,7 +2,7 @@
 
 terraform {
   backend "s3" {
-    bucket = "remodemo"
+    bucket = "sameassame"
     key = "terraform.tfstate"
     region = "ap-south-1"
     
