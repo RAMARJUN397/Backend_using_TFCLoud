@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "Ramarjun"
+    bucket = "remodemo"
     key = "backend.tf"
     region = "ap-south-1"
     
@@ -17,11 +17,11 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "Ramarjun"
+  bucket = "remodemo"
   acl    = "private"
 
   tags = {
-    Name        = "Ramarjun"
+    Name        = "remodemo"
     Environment = "OPS"
   }
 }
