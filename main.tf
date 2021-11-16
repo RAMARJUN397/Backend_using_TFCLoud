@@ -1,11 +1,14 @@
-
+# Install aws-cli
+#aws configure command use and connect terraform.
+#after that create two tf files main contain s3 creating code,state.tf contains backend code. 
 
 terraform {
   backend "s3" {
-    bucket = "sameassame"
+    bucket = "backenddemo"
     key = "terraform.tfstate"
     region = "ap-south-1"
-    
+    encrypt= "false"
+
   }
 }
 
