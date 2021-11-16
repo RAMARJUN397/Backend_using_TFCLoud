@@ -19,3 +19,13 @@ provider "aws" {
 
 }
 
+#Aws s3bucket
+resource "aws_s3_bucket" "terraformbackend" {
+  bucket = "arjunram"
+  acl    = "private"
+
+  tags = {
+    Name        = "arjunram"
+    Environment = "OPS"
+  }
+}
